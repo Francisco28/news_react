@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const New = ({notice}) => {
     
@@ -34,6 +35,10 @@ const New = ({notice}) => {
             </div>
         </div>
      );
+}
+
+New.propTypes = {
+    notice: PropTypes.object.isRequired
 }
  
 export default New;
