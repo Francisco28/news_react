@@ -2,11 +2,20 @@ import React from 'react';
 import styles from './Form.module.css';
 import useSelect from '../hooks/useSelect';
 
+//api = 45ef01eae29e45318b02524541456fd9
 const Form = () => {
 
+    const OPTIONS = [
+        { value: 'general', label: 'General' },
+        { value: 'business', label: 'Business' },
+        { value: 'entertainment', label: 'Entertainment' },
+        { value: 'health', label: 'Health' },
+        { value: 'science', label: 'Science' },
+        { value: 'technology', label: 'Technology' },
+    ];
 
     //utility custom hook
-    const [ category, SelectNews ] = useSelect();
+    const [ category, SelectNews ] = useSelect('general', OPTIONS);
 
     return ( 
         <div className={`row ${styles.searcher}`}>
